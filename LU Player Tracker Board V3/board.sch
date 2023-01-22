@@ -7097,7 +7097,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/2" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="16"/>
 <part name="D3" library="SamacSys_Parts" deviceset="ESD9L5.0ST5G" device="" override_package3d_urn="urn:adsk.eagle:package:38544704/2" override_package_urn="urn:adsk.eagle:footprint:38544705/1"/>
 <part name="SUPPLY31" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/3" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="0"/>
+<part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7389,10 +7389,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY28" gate="GND" x="256.54" y="157.48" smashed="yes">
 <attribute name="VALUE" x="254.635" y="154.305" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="83.82" y="162.56" smashed="yes" rot="R180">
-<attribute name="NAME" x="87.63" y="161.0614" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="87.63" y="165.862" size="1.778" layer="96" rot="R180"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -7412,8 +7408,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <wire x1="71.12" y1="162.56" x2="71.12" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="S3" gate="G$1" pin="COM_1"/>
+<wire x1="71.12" y1="162.56" x2="96.52" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
@@ -7607,13 +7603,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="U3" gate="G$1" pin="IO7"/>
 <wire x1="205.74" y1="119.38" x2="195.58" y2="119.38" width="0.1524" layer="91"/>
 <label x="195.58" y="119.38" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="S3" gate="G$1" pin="COM_1"/>
-<wire x1="88.9" y1="162.56" x2="96.52" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -8080,6 +8069,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <sheet>
 <description>7-segment</description>
 <plain>
+<text x="208.28" y="104.14" size="1.778" layer="91">LOW = dig 2
+HIGH = dig 1
+
+dig 1 |  dig 2</text>
 </plain>
 <instances>
 <instance part="IC4" gate="G$1" x="228.6" y="99.06" smashed="yes">
@@ -8117,6 +8110,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="267.97" y="92.9386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="267.97" y="88.138" size="1.778" layer="96"/>
 </instance>
+<instance part="+3V6" gate="G$1" x="228.6" y="215.9" smashed="yes">
+<attribute name="VALUE" x="231.14" y="218.44" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8139,6 +8135,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="127" y1="101.6" x2="116.84" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="101.6" x2="116.84" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="DS1" gate="G$1" pin="CATHODE_DP1._DP3"/>
+<wire x1="224.282" y1="205.74" x2="228.6" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="205.74" x2="228.6" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8251,20 +8253,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="153.162" y="205.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="CATH_DP1" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="!Y7"/>
-<wire x1="127" y1="99.06" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="99.06" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="91.44" x2="142.24" y2="91.44" width="0.1524" layer="91"/>
-<label x="142.24" y="91.44" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<wire x1="224.282" y1="205.74" x2="236.982" y2="205.74" width="0.1524" layer="91"/>
-<pinref part="DS1" gate="G$1" pin="CATHODE_DP1._DP3"/>
-<label x="226.822" y="205.74" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$19" class="0">
 <segment>
 <pinref part="IC4" gate="G$1" pin="Y0"/>
@@ -8299,9 +8287,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="287.02" y="91.44" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="DS1" gate="G$1" pin="CATHODE_DP2._DP4"/>
-<wire x1="163.322" y1="203.2" x2="153.162" y2="203.2" width="0.1524" layer="91"/>
-<label x="153.162" y="203.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="DS1" gate="G$1" pin="COMMON_ANODE_DIG2"/>
+<wire x1="163.322" y1="195.58" x2="152.4" y2="195.58" width="0.1524" layer="91"/>
+<label x="152.4" y="195.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GPIO4" class="0">
@@ -8332,12 +8320,30 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="218.44" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="CATH_DP2" class="0">
+<segment>
+<pinref part="DS1" gate="G$1" pin="CATHODE_DP2._DP4"/>
+<wire x1="163.322" y1="203.2" x2="152.4" y2="203.2" width="0.1524" layer="91"/>
+<label x="152.4" y="203.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="!Y7"/>
+<wire x1="127" y1="99.06" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="99.06" x2="124.46" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="91.44" x2="142.24" y2="91.44" width="0.1524" layer="91"/>
+<label x="142.24" y="91.44" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
