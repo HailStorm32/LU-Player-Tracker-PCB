@@ -7087,14 +7087,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="IC3" library="SamacSys_Parts" deviceset="ADP3339AKCZ-3.3-R7" device="" override_package3d_urn="urn:adsk.eagle:package:38561183/2" override_package_urn="urn:adsk.eagle:footprint:38561184/1"/>
 <part name="IC4" library="SamacSys_Parts" deviceset="SN74LVC1G19DBVRE4" device="" override_package3d_urn="urn:adsk.eagle:package:38561177/2" override_package_urn="urn:adsk.eagle:footprint:38561178/1"/>
 <part name="SUPPLY29" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/2" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="16"/>
+<part name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/2" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="100"/>
 <part name="+3V7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY30" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="IC1" library="SamacSys_Parts" deviceset="74AHC138D,118" device="" override_package3d_urn="urn:adsk.eagle:package:38561180/2" override_package_urn="urn:adsk.eagle:footprint:38561181/1"/>
 <part name="+3V8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="DS1" library="SamacSys_Parts" deviceset="HDSM-291C" device="" override_package3d_urn="urn:adsk.eagle:package:38561171/2" override_package_urn="urn:adsk.eagle:footprint:38561172/1" override_locally_modified="yes"/>
-<part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/2" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="16"/>
+<part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:6240564/1" override_package3d_urn="urn:adsk.eagle:package:38544695/2" override_package_urn="urn:adsk.eagle:footprint:6239918/1" value="100"/>
 <part name="D3" library="SamacSys_Parts" deviceset="ESD9L5.0ST5G" device="" override_package3d_urn="urn:adsk.eagle:package:38544704/2" override_package_urn="urn:adsk.eagle:footprint:38544705/1"/>
 <part name="SUPPLY31" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
