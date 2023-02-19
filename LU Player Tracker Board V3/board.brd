@@ -729,6 +729,7 @@
     Occupied</text>
 <text x="82.944" y="137.719" size="1.4224" layer="21">Player Count</text>
 <text x="-23" y="141" size="1.778" layer="21">LU Player Tracker V3</text>
+<text x="23" y="11" size="1.016" layer="22" rot="MR0">github.com/HailStorm32/LU-Player-Tracker-PCB</text>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
